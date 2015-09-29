@@ -345,6 +345,10 @@ void ofxImageSequence::loadFrame(int imageIndex)
 	texture.loadData(sequence[imageIndex]);
 
 	lastFrameLoaded = imageIndex;
+    
+    if (imageIndex > 10){
+        sequence[imageIndex - 10].clear();
+    }
 
 }
 
